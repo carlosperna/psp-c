@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
         printf("[Padre]: Mi PID es: %d\n\tVariable a: %d\n", getpid(), a);
         printf("[Padre]: El PID de mi padre es: %d\n", getppid());
         printf("[Padre]: El hijo %d ha terminado \n", wait(&estado_hijo));
-        printf("[Padre]: EL estado de finalización ha sido: %d\n", estado_hijo);
+        printf("[Padre]: El estado de finalización ha sido: %d\n", estado_hijo);
     } //Zona común
     return 0;
 }
