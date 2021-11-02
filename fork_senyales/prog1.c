@@ -29,16 +29,19 @@ int main(int argc, char const *argv[])
         signal(SIGUSR1, manejadorPadre);
         printf("[Proceso: %d]: Manejador activado.\n",getpid());
         pause();
+        int estado;
+        pid_t pid_hijo=wait(NULL);
     }
     return 0;
 }
 
+//Implementamos los manejadores
 void manejadorHijo(int num_senyal)
 {
-    printf("Soy el manejador de la señal del hijo\n");
+    printf("Soy el manejador de la señal del hijo.\n");
 }
 
 void manejadorPadre(int num_senyal)
 {
-    printf("Soy el manejador de la señal del padre\n");
+    printf("Soy el manejador de la señal del padre.\n");
 }
